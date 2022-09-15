@@ -1,0 +1,38 @@
+version: "3.9"
+services:
+  ansible:
+    build: docker/
+    container_name: "ansible"
+    command: "sleep infinity"
+    links:
+      - "playground:playground"
+    volumes:
+      - $PWD/config:/etc/ansible
+      - $PWD/keys/ansible_key:/root/.ssh/id_rsa:ro
+  traefik:
+    image: "traefik:v2.6"
+    container_name: "traefik"
+    command:
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entrypoints.web.address=:80"
+    ports:
+      - "80:80"
+      - "8080:8080"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+  playground:
+    build:
+      context: docker/
+      dockerfile: Dockerfile_playground
+    deploy:
+      replicas: 3
+    ports:
+      - 80
+    volumes:
+      - $PWD/keys/ansible_key.pub:/root/.ssh/authorized_keys
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.playground.rule=Host(`localhost`)"
+      - "traefik.http.routers.playground.entrypoints=web"

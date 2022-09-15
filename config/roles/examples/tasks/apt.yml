@@ -1,0 +1,20 @@
+---
+  - name: Run an apt-get update
+    apt:
+      update_cache: yes
+    become: true
+    when: ansible_os_family == "Debian" and ansible_distribution_major_version | int >= 18
+
+  - name: Install latest version of "crontab"
+    apt:
+      name: "{{ package }}"
+      state: latest
+      install_recommends: no
+    loop:
+      - cron
+      - npm
+      - pip
+    loop_control:
+      loop_var: "package"
+    become: true
+    when: ansible_os_family == "Debian" and ansible_distribution_major_version | int >= 18

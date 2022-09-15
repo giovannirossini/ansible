@@ -1,0 +1,7 @@
+---
+- name: Examples of common modules
+  include_tasks: "{{ module }}.yml"
+  loop_control:
+    loop_var: module
+  loop:
+    - apt
