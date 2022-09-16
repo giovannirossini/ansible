@@ -1,0 +1,6 @@
+---
+- name: Run a command that uses non-posix shell-isms
+  raw: cat /tmp/*txt
+  args:
+    executable: /bin/bash
+  become: true

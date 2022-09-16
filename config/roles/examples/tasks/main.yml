@@ -26,3 +26,4 @@
     - get_url
     - lineinfile
     - package
+    - raw
