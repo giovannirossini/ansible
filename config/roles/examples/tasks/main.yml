@@ -27,3 +27,4 @@
     - lineinfile
     - package
     - raw
+    - service
