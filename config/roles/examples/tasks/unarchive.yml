@@ -1,0 +1,12 @@
+---
+- name: Unarchive a file that is already on the remote machine
+  unarchive:
+    src: /tmp/tmp.gz
+    dest: /var/log
+    remote_src: yes
+
+- name: Unarchive a file that needs to be downloaded
+  unarchive:
+    src: https://go.dev/dl/go1.19.1.linux-amd64.tar.gz
+    dest: /usr/local/bin
+    remote_src: yes
