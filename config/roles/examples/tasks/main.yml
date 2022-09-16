@@ -24,3 +24,4 @@
     - yum
     - archive
     - get_url
+    - lineinfile
