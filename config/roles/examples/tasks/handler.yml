@@ -1,0 +1,11 @@
+- name: Create NGINX configuration
+  template:
+    src: server
+    dest: /etc/nginx/sites-available/default
+
+- name: Create NGINX Symlink
+  file:
+    src: /etc/nginx/sites-available/default
+    dest: /etc/nginx/sites-enabled/default
+    state: link
+  notify: "check nginx"

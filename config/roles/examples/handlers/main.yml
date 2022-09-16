@@ -1,0 +1,3 @@
+- name: Check if NGINX config it's ok
+  command: "nginx -t"
+  listen: "check nginx"

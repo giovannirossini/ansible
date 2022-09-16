@@ -31,3 +31,4 @@
     - unarchive
     - copy
     - fetch
+    - handler
