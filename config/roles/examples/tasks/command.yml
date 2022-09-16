@@ -1,0 +1,4 @@
+---
+- name: Run command scripts.sh
+  command: bash /tmp/script.sh
+  become: true
