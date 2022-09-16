@@ -5,7 +5,7 @@
     dest: /var/log
     remote_src: yes
 
-- name: Unarchive a file that needs to be downloaded
+- name: Unarchive go binary that needs to be downloaded
   unarchive:
     src: https://go.dev/dl/go1.19.1.linux-amd64.tar.gz
     dest: /usr/local/bin

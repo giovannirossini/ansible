@@ -1,7 +1,7 @@
 ---
-- name: Ensure a job that runs at 2 and 5 exists. Creates an entry like "0 5,2 * * sh script.sh"
+- name: Ensure a job that runs at 2 and 5 exists. Creates an entry like "0 5,2 * * sh /tmp/script.sh"
   cron:
     name: "check dirs"
     minute: "0"
     hour: "5,2"
-    job: "sh script.sh"
+    job: "sh /tmp/script.sh"

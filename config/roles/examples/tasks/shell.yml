@@ -1,5 +1,5 @@
 ---
-- name: This command will change the working directory to somedir/ and will only run when somedir/somelog.txt doesn't exist
+- name: This command will change the working directory to /tmp/ and will only run when /tmp/somelog.txt doesn't exist
   shell: /tmp/script.sh >> somelog.txt
   args:
     chdir: /tmp/

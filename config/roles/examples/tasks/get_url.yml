@@ -1,5 +1,5 @@
 ---
-- name: download docker install script
+- name: Download docker install script
   get_url:
     url: https://get.docker.com
     dest: /tmp/docker

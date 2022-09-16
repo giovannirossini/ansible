@@ -1,15 +1,15 @@
 ---
-- name: Compress directory /path/to/foo/ into /path/to/foo.tgz
+- name: Compress directory /tmp into /tmp/tmp.gz
   archive:
     path: /tmp
     dest: /tmp/tmp.gz
 
-- name: Compress regular file /path/to/foo into /path/to/foo.gz and remove it
+- name: Compress regular file /var/www/html/index.html into /var/www/html/index.html.gz and remove it
   archive:
     path: /var/www/html/index.html
     remove: yes
 
-- name: Create a bz2 archive of multiple files, rooted at /path
+- name: Create a bz2 archive of multiple files, rooted at /tmp and /var/www/html
   archive:
     path:
     - /tmp

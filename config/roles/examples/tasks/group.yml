@@ -4,7 +4,7 @@
     name: somegroup
     state: present
 
-- name: Ensure group "docker" exists with correct gid
+- name: Ensure group "admin" exists with correct gid
   group:
     name: admin
     state: present

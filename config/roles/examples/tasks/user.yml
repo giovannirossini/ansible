@@ -6,22 +6,22 @@
     uid: 1040
     group: admin
 
-- name: Add the user 'james' with a bash shell, appending the group 'admins' and 'developers' to the user's groups
+- name: Add the user 'giovanni' with a bash shell, appending the group 'admins' and 'developers' to the user's groups
   user:
-    name: james
+    name: giovanni
     shell: /bin/bash
     groups: admin
     append: yes
 
 - name: Remove the user 'johnd'
   user:
-    name: james
+    name: johnd
     state: absent
     remove: yes
 
-- name: Create a 2048-bit SSH key for user jsmith in ~jsmith/.ssh/id_rsa
+- name: Create a 2048-bit SSH key for user giovanni in ~jsmith/.ssh/id_rsa
   user:
-    name: johnd
+    name: giovanni
     generate_ssh_key: yes
     ssh_key_bits: 2048
     ssh_key_file: .ssh/id_rsa

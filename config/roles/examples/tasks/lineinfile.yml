@@ -5,13 +5,13 @@
     regexp: '^System:'
     line: "System: Linux"
 
-- name: deleting a line
+- name: Deleting a line
   lineinfile:
     path: /etc/sudoers
     state: absent
     regexp: '^%wheel'
 
-- name: replace a line only after a specified string
+- name: Replace a line only after a specified string
   lineinfile:
     path: /tmp/script.sh
     insertafter: '^Tools: '

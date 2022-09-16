@@ -12,7 +12,7 @@
     size: 1m
     recurse: yes
 
-- name: Recursively find /var/tmp files with last access time greater than 3600 seconds
+- name: Recursively find /tmp files with last access time greater than 3600 seconds
   find:
     paths: /tmp
     age: 3600
