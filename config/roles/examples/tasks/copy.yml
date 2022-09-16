@@ -1,0 +1,7 @@
+---
+- name: copy a file from local machine to local machine
+  copy:
+    src: /tmp/somelog.txt
+    dest: /var/log/
+    remote_src: yes
+  become: true
