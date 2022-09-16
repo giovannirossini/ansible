@@ -19,3 +19,4 @@
     - find
     - include_vars
     - npm
+    - pip

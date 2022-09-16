@@ -1,0 +1,10 @@
+---
+- name: Install multi python packages
+  pip:
+    name:
+      - django>1.11.0,<1.12.0
+      - bottle>0.10,<0.20,!=0.11
+
+- name: Install specified python requirements
+  pip:
+    requirements: /tmp/requirements.txt
