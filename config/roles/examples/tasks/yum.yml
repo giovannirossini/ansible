@@ -1,0 +1,17 @@
+---
+  - name: Uninstall NGINX
+    yum:
+      name: nginx
+      state: absent
+    become: true
+    when: ansible_os_family == "RedHat" and ansible_lsb.major_release|int >= 6
+
+  - name: Install a list of packages with a list variable
+    yum:
+      name: "{{ packages }}"
+    vars:
+      packages:
+      - nginx
+      - python3.10
+    become: true
+    when: ansible_os_family == "RedHat" and ansible_lsb.major_release|int >= 6
