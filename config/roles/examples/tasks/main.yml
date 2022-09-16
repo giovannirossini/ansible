@@ -9,3 +9,4 @@
     - template
     - blockinfile
     - cron
+    - group

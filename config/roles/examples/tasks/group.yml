@@ -1,0 +1,16 @@
+---
+- name: Ensure group "somegroup" exists
+  group:
+    name: somegroup
+    state: present
+
+- name: Ensure group "docker" exists with correct gid
+  group:
+    name: admin
+    state: present
+    gid: 2202
+
+- name: deleting a group
+  group:
+    name: somegroup
+    state: absent
