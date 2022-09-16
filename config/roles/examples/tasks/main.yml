@@ -10,3 +10,4 @@
     - blockinfile
     - cron
     - group
+    - ping
