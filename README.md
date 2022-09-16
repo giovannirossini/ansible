@@ -9,6 +9,7 @@ To start you need to create the SSH keys that will be used. To do this, run insi
 ```shell
 mkdir -p keys
 ssh-keygen -t rsa -b 2048 -N '' -f keys/ansible_key
+chown -R root:root keys/
 ```
 
 After creating the keys, you need to run the command:
