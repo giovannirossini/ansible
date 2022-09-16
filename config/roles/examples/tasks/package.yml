@@ -5,10 +5,9 @@
     state: present
   become: true
 
-- name: Install the latest version of Apache and MongoDB
+- name: Install the latest version of Apache
   package:
     name:
       - apache2
-      - mongodb
     state: latest
   become: true

@@ -27,3 +27,6 @@ ansible -m ping all
 ansible-playbook examples.yml
 ```
 
+And you see something like this:
+
+![image](result.png)

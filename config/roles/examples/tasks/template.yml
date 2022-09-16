@@ -5,7 +5,7 @@
     dest: /tmp/script.sh
     owner: root
     group: www-data
-    mode: '0644'
+    mode: 'u=x'
 
 - name: Template requirements
   template:
