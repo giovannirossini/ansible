@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo "
+  System: Unix
+  Environment: dev
+  Config: YAML
+  Tools: Ansible
+"

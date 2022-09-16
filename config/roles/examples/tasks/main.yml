@@ -6,3 +6,4 @@
   loop:
     - apt
     - file
+    - template

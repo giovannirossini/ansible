@@ -1,0 +1,13 @@
+---
+- name: Template a script
+  template:
+    src: script
+    dest: /tmp/script.sh
+    owner: root
+    group: www-data
+    mode: '0644'
+
+- name: Template requirements
+  template:
+    src: requirements
+    dest: /tmp/requirements.txt
