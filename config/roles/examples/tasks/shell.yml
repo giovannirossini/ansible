@@ -1,0 +1,17 @@
+---
+- name: This command will change the working directory to somedir/ and will only run when somedir/somelog.txt doesn't exist
+  shell: /tmp/script.sh >> somelog.txt
+  args:
+    chdir: /tmp/
+    creates: somelog.txt
+  become: true
+
+- name: This command will change the working directory to tmp/
+  shell:
+    cmd: ls -l | grep log
+    chdir: /tmp/
+
+- name: Run a command that uses non-posix shell-isms
+  shell: cat /tmp/*txt
+  args:
+    executable: /bin/bash
