@@ -1,0 +1,6 @@
+---
+- name: copy a file from remote machine to local machine without parent folder structure.
+  fetch:
+    src: /var/log/somelog.txt
+    dest: /tmp/
+    flat: true
