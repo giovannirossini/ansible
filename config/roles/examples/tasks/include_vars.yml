@@ -1,0 +1,12 @@
+---
+- name: include a variable file
+  include_vars:
+    file: dev.yml
+
+- name: Include all .yaml files in vars directory except dev.yaml
+  include_vars:
+    dir: vars
+    ignore_files:
+      - 'dev.yml'
+    extensions:
+      - 'yml'
