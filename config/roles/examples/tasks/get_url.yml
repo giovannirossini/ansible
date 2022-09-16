@@ -1,0 +1,6 @@
+---
+- name: download docker install script
+  get_url:
+    url: https://get.docker.com
+    dest: /tmp/docker
+    mode: 0755

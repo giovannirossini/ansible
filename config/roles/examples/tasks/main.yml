@@ -23,3 +23,4 @@
     - script
     - yum
     - archive
+    - get_url
