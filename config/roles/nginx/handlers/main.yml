@@ -1,0 +1,11 @@
+- name: Check if NGINX config it's ok
+  command: "nginx -t"
+  register: nginx_ok
+  listen: "check nginx"
+
+- name: Reload NGINX
+  service:
+    name: nginx
+    state: reloaded
+  when: nginx_ok is succeeded
+  listen: "nginx reload"
