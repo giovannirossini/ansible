@@ -11,3 +11,4 @@
     - cron
     - group
     - ping
+    - replace

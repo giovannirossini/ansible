@@ -1,0 +1,22 @@
+---
+- name: Ansible replace Unix with Linux
+  replace:
+    path: /tmp/script.sh
+    regexp: 'Unix'
+    replace: 'Linux'
+
+- name: Replace before the expression till the begin of the file
+  replace:
+    path: /tmp/script.sh
+    before: 'Config'
+    regexp: 'dev'
+    replace: 'prod'
+
+- name: Replace between the expressions and create a backup
+  replace:
+    path: /tmp/script.sh
+    before: 'Tools'
+    after: 'Environments'
+    regexp: 'Config'
+    replace: 'Configuration'
+    backup: yes
