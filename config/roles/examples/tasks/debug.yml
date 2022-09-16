@@ -1,0 +1,13 @@
+---
+- name: Print a simple statement
+  debug:
+    msg: "Hello World! A custom message"
+
+- name: Get uptime information
+  shell: /usr/bin/uptime
+  register: result
+
+- name: Print return information from the previous task
+  debug:
+    var: result
+    verbosity: 2
