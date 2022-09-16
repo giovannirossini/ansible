@@ -18,3 +18,4 @@
     - debug
     - find
     - include_vars
+    - npm

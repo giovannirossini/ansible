@@ -1,0 +1,9 @@
+---
+- name: Install "coffee-script" node.js package.
+  community.general.npm:
+    name: coffee-script
+    path: /var/www/html
+
+- name: Install packages based on package.json.
+  community.general.npm:
+    path: /var/www/html
