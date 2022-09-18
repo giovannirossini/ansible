@@ -32,3 +32,5 @@
     - copy
     - fetch
     - handler
+    - stat
+    - sync

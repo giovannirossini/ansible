@@ -1,0 +1,10 @@
+---
+- name: Check if path exists
+  stat:
+    path: "/var/log"
+  register: var_log
+
+- name: Print path information
+  debug:
+    var: var_log
+    verbosity: 2

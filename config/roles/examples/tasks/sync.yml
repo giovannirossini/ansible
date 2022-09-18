@@ -1,0 +1,9 @@
+---
+- name: Synchronize module
+  synchronize:
+    src: "/var/log"
+    dest: "/tmp"
+    recursive: true
+    delete: true
+    checksum: true
+  delegate_to: "{{ inventory_hostname }}"
