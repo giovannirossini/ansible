@@ -16,11 +16,9 @@
 
 - name:  Remove collected files
   file:
-    path: "{{ files.path }}"
+    path: "{{ item.path }}"
     state: absent
-  loop_control:
-    loop_var: files
-  loop:
+  with_items:
     - "{{ files_list.files }}"
   when: nginx is changed
 
