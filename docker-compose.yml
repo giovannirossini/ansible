@@ -27,9 +27,7 @@ services:
       context: docker/
       dockerfile: Dockerfile_playground
     deploy:
-      replicas: 3
-    ports:
-      - 80
+      replicas: 1
     volumes:
       - $PWD/keys/ansible_key.pub:/root/.ssh/authorized_keys
     labels:
